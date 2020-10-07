@@ -9,7 +9,7 @@ import json
 def get_token(code):
 	client_auth = requests.auth.HTTPBasicAuth("SVkL9p1vQmhKUw", "s42UWMRwSQwQmXvvPuT654DXhcE")
 	headers={"User-Agent":"xyz"}	
-	post_data = {"grant_type": "authorization_code","code": code,"redirect_uri": "http://127.0.0.1:8000/"}
+	post_data = {"grant_type": "authorization_code","code": code,"redirect_uri": "https://litreddit.herokuapp.com"}
 	response = requests.post("https://www.reddit.com/api/v1/access_token",auth=client_auth,data=post_data,headers=headers)	
 	token_json = response.json()
 	accesstoken=token_json['access_token']
