@@ -1,0 +1,132 @@
+{% load dict_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/static/home.css">
+	<title>home page</title>
+</head>
+<body>
+<style type="text/css">
+
+.topdiv{
+	text-align: center;
+}	
+.row {
+  margin: 15px;
+}
+
+.page{
+	height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.notice{
+	flex:1;
+	text-align: center;
+	/*background-image: url("https://images.pexels.com/photos/4852353/pexels-photo-4852353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");*/
+	background-repeat: no-repeat;
+	border-radius: 20px;
+	margin: 35px;
+}
+
+.icon{
+	size: 50px;
+}
+
+/*.container{
+	width: 80%;
+	height: 100px;
+}
+
+.hompage{
+	display: flex;
+	height: 100vh;
+	align-content: center;
+}*/
+body{
+	background-color: white;
+}
+
+.sub1{
+	background-color:  #287094;
+}
+.sub2{
+	background-color:  #F6F6F6;
+}
+.sub3{
+	background-color:  #023246;
+}
+
+
+
+
+.white{
+	color:  #F6F6F6;
+}
+.black{
+	color: black;
+}
+</style>
+<!-- <div class="homepage">
+	<div class="container"> -->
+		<div class="topdiv"><h4 class="heading">Hii <b>{{username}}</b></h4> <!-- <button href="" type ="submit">logout</button></div> -->
+		<div class="page">
+		<div class="notice sub1">
+			<br><br>
+			<h3 class="white">Trending on Reddit</h3>
+			<p class="white">
+				{% for key, value in context.items %}
+				    <a href="{{ value }}">Trending on <b>{{ key }} </b></a><br>
+				{% endfor %}
+			</p>
+		</div>
+		<!-- <div class="main">
+		  <div class="row">
+		    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 icon">
+		      <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid rounded">
+		    </a>
+		    <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+		      <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded">
+		    </a>
+		    <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+		      <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded">
+		    </a>
+		  </div>
+		  <div class="row">
+		    <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+		      <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid rounded">
+		    </a>
+		    <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+		      <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid rounded">
+		    </a>
+		    <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+		      <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid rounded">
+		    </a>
+		  </div>
+		</div> -->
+		<div class="notice  sub2">
+			<br><br>
+			<h3 class="black">Popular Users</h3>
+			<p class="black">
+				{% for key, value in popuser.items %}
+				    <a href="{{ value }}">Popular user No <b>{{ key }} </b></a><br>
+				{% endfor %}
+			</p>
+		</div>
+		<div class="notice  sub3">
+			<br><br>
+			<h3 class="white">Top Post</h3>
+			<p class="white">
+				{% for key, value in toppost.items %}
+				    <a href="{{ value }}">Top No<b>{{ key }} </b></a><br>
+				{% endfor %}
+			</p>
+		</div>
+	</div>
+<!-- 	</div>
+</div> -->
+</body>
+</html>

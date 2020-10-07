@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="static/login.css">
+</head>
+</head>
+
+<style type="text/css">
+	body {
+  background: #0d8aa5;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items:  center;
+  height: 100vh;
+}
+
+.card{
+  background: white;
+  width: 20%;
+  border-radius: 50%;
+}
+
+.position{
+  position: absolute;
+  bottom:500px;
+  size: 50px;
+  width: 5%;
+  left:50%;
+}
+
+img:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+</style>
+<body>
+
+<div >
+	<a class="container" href="https://www.reddit.com/api/v1/authorize?SVkL9p1vQmhKUw&client_id=SVkL9p1vQmhKUw&redirect_uri=http://127.0.0.1:8000/&response_type=code&scope=identity mysubreddits account read history&state=PUT_ANY_STRING_HERE"><img class="card" src="https://cdn.pixabay.com/photo/2020/04/26/15/08/reddit-5095703_1280.png"></a>
+  <img  class ="position" src="https://media3.giphy.com/media/WoztRT1FFeliwstmao/giphy.gif?cid=790b7611zt070aikdm4n8vv8rqstmvyx468hq21goinuklee&rid=giphy.gif">
+</div>
+
+	
+
+</body>
+
+</html>
